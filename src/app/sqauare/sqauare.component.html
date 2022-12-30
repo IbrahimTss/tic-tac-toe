@@ -1,4 +1,3 @@
-<!-- <button><h3>{{random}}</h3></button> -->
 <button class="btn btn-dark"  *ngIf="!random">{{ random }}</button>
-<button  class="btn btn-success"  *ngIf="random == 'X'">{{ random }}</button>
-<button  class="btn btn-warning"  *ngIf="random == 'O'" >{{ random }}</button>
+<button  class="btn btn-warning" *ngIf="random == '✔'"><span>{{random}}</span></button>
+<button  class="btn btn-success"  *ngIf="random == '❌'" ><span>{{ random }}</span></button>

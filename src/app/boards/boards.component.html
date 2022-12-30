@@ -1,24 +1,23 @@
-<div class="container text-center bg-light p-5 mt-5 rounded border border-danger shadow-lg">
-    <p class="text-center text-info"><b>Tic Tac Toe</b></p>
-    <h1>Current player  : {{player}}</h1>
+<div class="container p-5 mt-5 rounded border border-dark shadow-lg">
+    <p class="text-center text-light"><b style="font-size: 25px ;">Tic Tac Toe</b></p>
+    <h3 class="text-center text-primary" [hidden]="winner">Current player  : {{player}}</h3>
 
 
-    <h2 *ngIf="winner">
-        Player {{winner}} won the game 😍.
-    </h2>
+    <h4  class="text-center" *ngIf="winner">
+        <strong>Player <span style="font-size: 25px;">{{winner}}</span> won the game 😍</strong>
+    </h4>
 
-    <main>
+    <main class="text-center mt-3">
         <app-sqauare 
         *ngFor="let val of squares;  let i = index"
         [random]="val"
         (click)="makeMove(i)"
-        class="text-center"
         [class]="{oncli : winner}"
         >
 
         </app-sqauare>
     </main>
-    <div class="text-center" *ngIf="winner">
+    <div class="text-center">
         <button class="btn btn-danger mb-2 " (click)="newGame()">Restart</button>
     </div>
 </div>

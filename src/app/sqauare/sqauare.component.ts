@@ -7,6 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SqauareComponent  {
 // winner : boolean = false
-@Input() random !: 'X' | 'O'  ;
+@Input() random !: '✔' | '❌'  ;
 
 }
